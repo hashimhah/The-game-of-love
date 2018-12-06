@@ -1,0 +1,79 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script language="javascript" type="text/javascript" src="webhelper.js"></script>
+  <script language="javascript" type="text/javascript" src="love.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <style>
+   #border, #love {
+	 filter : alpha(opacity=100);
+   margin:0 auto 0 auto!important;
+	 width:80%;
+	}
+
+   #border {
+      position:absolute;
+      top:5;
+      left:9%;
+      height:90%!important;
+    }
+    #love{
+      position:relative;
+    }
+	.hide {
+	 display: none;
+	}
+	.show {
+	display: block;
+	}
+	
+  </style>
+  
+</head>
+<body>
+
+<video id="love" class="show" controls autoplay>
+  <source src="love.mp4" type="video/mp4">
+  <source src="love.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+</video>
+	
+    <div id = "border" class="hide">
+        <p id = "currentStory">text</p>
+        <select id = "choices" name="choice">
+            <option id = "0" value="first">First Value</option>
+            <option id = "1" value="second" selected>Second Value</option>
+            <option id = "2" value="third">Third Value</option>
+        </select>
+            <button id = "button1">Click here</button>
+    </div>
+
+        <select id = "targets" name="target">
+              <option value="first">First Target</option>
+              <option value="second" selected>Second Target</option>
+              <option value="third">Third Target</option>
+        </select>
+<script>
+    document.getElementById('love').play();
+  setTimeout(function(){
+     document.getElementById('vid').play();
+ },1000);
+ function startVideoIfNotStarted () {
+    $(".love").ready(function () {
+        window.setTimeout(function(){
+            videojs("id_of_video_tag").play()
+        }, 1000);
+    });
+}
+$(startVideoIfNotStarted);
+</script>
+
+  <script>
+  setTimeout(function(){
+    document.getElementById('border').classList.remove('hide');
+    document.getElementById('love').classList.add('hide');
+    }, 65500);
+  </script>
+
+</body>
+</html>
