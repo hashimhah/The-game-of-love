@@ -1,14 +1,6 @@
 // rpg-LoveatFirstsight.js
 
-
-// core variables
-var messages = []; // for a sequence of messages
-var answer = null;
-var options = [];
-var targets = [];
-var data = [];
-// story function variables
-var spin = 0;
+scene1=LoveatFirstsight;
 
 function checkAnswers(answer) {  // Matches Scenes  - replace with yours
 	if (answer == "Talk to her") {
